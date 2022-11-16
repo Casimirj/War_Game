@@ -37,9 +37,11 @@ class Game:
         game_deck.get_game_deck()
         game_deck.shuffle(10)
 
-        for player in self.players if not game_deck.is_empty():  # players draw 1 at a time
-            dealt_card = game_deck.draw_card()
-            player.receive_card(dealt_card)
+        while not game_deck.is_empty():
+            for player in self.players:
+                if not game_deck.is_empty():  # players draw 1 at a time
+                    dealt_card = game_deck.draw_card()
+                    player.receive_card(dealt_card)
 
 
     def player_has_won(self):
