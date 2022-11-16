@@ -52,7 +52,17 @@ class Deck:
                 random_card_position = random.randint(0, cards_left - 1)
                 # using "pop" removes the card from the list (so we don't add the same card 2 times)
                 random_card = self.cards_in_deck.pop(random_card_position)
-
+    # 5: "Five",      # You could probably generate the names for numbers 2-10
+    # 6: "Six",       # But because there is some nuance I wanted to define it simply
+    # 7: "Seven",     # ex of nuance: 1 doesn't exist, cards above 10 have weird names, ect
+    # 8: "Eight",
+    # 9: "Nine",
+    # 10: "Ten",
+    # 11: "Jack",
+    # 12: "Queen",
+    # 13: "King",
+    # 14: "Ace",
+    # 15: "Joker"
                 shuffled_deck.append(random_card)
                 cards_left = cards_left - 1
 
